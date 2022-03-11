@@ -103,6 +103,7 @@ void delete_mat(char** mat, int size){
 
 
 int main(){
+<<<<<<< HEAD
     int row, col;
     char c1, c2;
     cout << "Enter number of rows:" << endl;
@@ -118,5 +119,8 @@ int main(){
     cout << "Enter second symbol:" << endl;
     cin >> c2;
     cout << ariel::mat(col, row, c1, c2) << endl;
+=======
+    cout << ariel::mat(9, 7, '@', '-') << endl; 
+>>>>>>> ed6ba10e36c4839dd52bc2e430e2a095db99d607
     return 0;
 }
