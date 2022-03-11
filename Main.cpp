@@ -15,5 +15,5 @@ int main(){
     cout << "Enter second symbol:" << endl;
     cin >> c2;
     cout << mat(col, row, c1, c2) << endl;
-    return 0;
+    return 0;//
 }
