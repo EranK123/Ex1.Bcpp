@@ -19,7 +19,7 @@ char** build_mat(int col, int row, char sym1, char sym2){
     if(col % 2 == 0 || row % 2 == 0){
         throw std::invalid_argument("Row or Column must not divide by 2");
     }
-    if(sym1 == '\n' || sym1 == ' ' || sym1 == '\r' == sym2 == '\n'  || sym2 == '\r' || sym2 == ' '){
+    if(sym1 == '\n' || sym1 == ' ' || sym1 == '\r' || sym2 == '\n'  || sym2 == '\r' || sym2 == ' '){
          throw std::invalid_argument("Cannot apply those symbols");
     }
     char** mat = new char*[row];
@@ -105,6 +105,6 @@ void delete_mat(char** mat, int size){
 
 
 int main(){
-    cout << ariel::mat(8, 7, '@', '-') << endl; 
+    cout << ariel::mat(9, 7, '@', '-') << endl; 
     return 0;
 }
