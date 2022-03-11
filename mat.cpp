@@ -10,18 +10,18 @@ char** build_mat(int col, int row, char sym1, char sym2);
 std::string ariel::mat(int col, int row, char sym1, char sym2){
     char** mat = build_mat(col, row, sym1, sym2);
     string s = mat_to_string(mat, row, col);
-    delete_mat(mat, row * col);
+    delete_mat(mat, row);
     return s;
 
 }
 
 char** build_mat(int col, int row, char sym1, char sym2){
-    // if(col % 2 == 0 || row % 2 == 0){
-    //     return NULL;
-    // }
-    // if(sym1 > 46 || sym1 < 33 || sym2 > 46 || sym2 < 33){
-    //     return NULL;
-    // }
+    if(col % 2 == 0 || row % 2 == 0){
+        throw std::invalid_argument("Row or Column must not divide by 2");
+    }
+    if(sym1 == '\n' || sym1 == ' ' || sym1 == '\r' == sym2 == '\n'  || sym2 == '\r' || sym2 == ' '){
+         throw std::invalid_argument("Cannot apply those symbols");
+    }
     char** mat = new char*[row];
     for (int i = 0; i < row; i++){
         mat[i] = new char[col];
@@ -105,6 +105,6 @@ void delete_mat(char** mat, int size){
 
 
 int main(){
-    cout << ariel::mat(5, 15, '@', '-') << endl; 
+    cout << ariel::mat(8, 7, '@', '-') << endl; 
     return 0;
 }
