@@ -11,7 +11,7 @@ std::string ariel::mat(int col, int row, char sym1, char sym2){
     char** mat = build_mat(col, row, sym1, sym2);
     string s = mat_to_string(mat, row, col);
     delete_mat(mat, row);
-    return s;
+    return s;//
 
 }
 
