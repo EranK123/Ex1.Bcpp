@@ -14,7 +14,6 @@ std::string ariel::mat(int col, int row, char sym1, char sym2){
     string s = mat_to_string(mat, row, col);
     delete_mat(mat, row);
     return s;
-
 }
 
 char** build_mat(int col, int row, char sym1, char sym2){
@@ -110,6 +109,16 @@ void delete_mat(char** mat, int size){
 
 
 // int main(){
-//     cout << ariel::mat(1, 1, '#', ')') << endl; 
-//     return 0;
+//     int row, col;
+    // char c1, c2;
+    // cout << "Enter number of rows:" << endl;
+    // cin >> row;
+    // cout << "Enter number of columns:" << endl;
+    // cin >> col;
+    // cout << "Enter first symbol:" << endl;
+    // cin >> c1;
+    // cout << "Enter second symbol:" << endl;
+    // cin >> c2;
+    // cout << mat(col, row, c1, c2) << endl;
+    // return 0;
 // }
