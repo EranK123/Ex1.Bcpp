@@ -20,9 +20,6 @@ vector<vector<char>> build_mat(int col, int row, char sym1, char sym2){
     if(col % 2 == 0 || row % 2 == 0){
         throw std::invalid_argument("Row or Column must not divide by 2");
     }
-    // if(sym1 == '\n' || sym1 == ' ' || sym1 == '\r' || sym2 == '\n'  || sym2 == '\r' || sym2 == ' '){
-    //      throw std::invalid_argument("Cannot apply those symbols");
-    // }
     if(sym1 < x || sym1 > y || sym2 < x || sym2 > y){
          throw std::invalid_argument("Cannot apply those symbols");
     }
